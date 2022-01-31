@@ -1,0 +1,73 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #d67979;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#picture-frame {
+  border: 18px solid #441e1e;
+  border-radius: 6px;
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+}
+
+#img-slides {
+  display: flex;
+  transition: transform .6s ease-in-out;
+}
+
+.slide-img {
+  width: 400px;
+  height: 300px;
+}
+
+#controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 5px;
+  border: 3px solid #441e1e;
+  border-radius: 5px;
+  background-color: #e9a5a5;
+  cursor: pointer;
+  color: #441e1e
+}
+
+#nav-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 100%;
+}
+
+.small-dot {
+  background-color: #441e1e;
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.big-dot {
+  width: 10px;
+  height: 10px;
+}

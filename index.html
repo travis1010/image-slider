@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slider</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+    <div id="picture-frame">
+      <div id="img-slides">
+        <img src="./images/img1.png" class="slide-img">
+        <img src="./images/img2.png" class="slide-img">
+        <img src="./images/img3.png" class="slide-img">
+        <img src="./images/img4.png" class="slide-img">
+        <img src="./images/img5.png" class="slide-img">
+        <img src="./images/img6.png" class="slide-img">
+      </div>
+    </div>
+    <div id="nav-dots">
+      
+    </div>
+    <div id="controls">
+      <button onclick="previous()">
+        <svg width="20px" height="20px" viewBox="0 0 1024 1024" class="icon" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M685.248 104.704a64 64 0 010 90.496L368.448 512l316.8 316.8a64 64 0 01-90.496 90.496L232.704 557.248a64 64 0 010-90.496l362.048-362.048a64 64 0 0190.496 0z"/></svg>
+      </button>
+      <button onclick="next()">
+        <svg width="20px" height="20px" viewBox="0 0 1024 1024" class="icon" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M338.752 104.704a64 64 0 000 90.496l316.8 316.8-316.8 316.8a64 64 0 0090.496 90.496l362.048-362.048a64 64 0 000-90.496L429.248 104.704a64 64 0 00-90.496 0z"/></svg>
+      </button>
+    </div>
+</body>
+</html>
