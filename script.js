@@ -4,8 +4,34 @@ let transX = 0;
 let automated = false;
 let autoTimer = false;
 
+
+const autoButton = document.getElementById('auto-button');
 const playIcon = document.getElementById('play-icon');
 const pauseIcon = document.getElementById('pause-icon');
+
+function clearEle(ele) {
+  while (ele.firstChild) {
+    ele.removeChild(ele.firstChild);
+  }
+}
+
+function nextBtn() {
+  clearTimeout(autoTimer);
+  automated = false;
+  autoTimer = null;
+  clearEle(autoButton);
+  autoButton.appendChild(playIcon);
+  next();
+}
+
+function previousBtn() {
+  clearTimeout(autoTimer);
+  automated = false;
+  autoTimer = null;
+  clearEle(autoButton);
+  autoButton.appendChild(playIcon);
+  previous();
+}
 
 function next() {
   if (transX + 400 < imgCount * 400){
@@ -17,7 +43,7 @@ function next() {
   }
   showNavDots();
   if (automated) {
-    setTimeout(function() { next() }, 3000);
+    autoTimer = setTimeout(function() { next() }, 3000);
   }
 }
 
@@ -65,12 +91,9 @@ function goToImg(dataX) {
 }
 
 function automate() {
-  const autoButton = document.getElementById('auto-button');
   automated = !automated
   clearTimeout(autoTimer);
-  while (autoButton.firstChild) {
-    autoButton.removeChild(autoButton.firstChild);
-  }
+  clearEle(autoButton);
 
   if (automated) {
     autoButton.appendChild(pauseIcon);
@@ -82,6 +105,6 @@ function automate() {
 }
 
 showNavDots();
-document.getElementById('auto-button').appendChild(document.getElementById('play-icon'));
+autoButton.appendChild(document.getElementById('play-icon'));
 
 
